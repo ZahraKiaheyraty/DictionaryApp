@@ -2,33 +2,39 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "7729e0543818270b0c4ec0d57721cd73",
+    "identityHash": "d60c4d5ea11be6c1309e1301163b45f3",
     "entities": [
       {
-        "tableName": "fa2ar",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `onvan` TEXT NOT NULL, `matn` TEXT NOT NULL, `fav` INTEGER NOT NULL)",
+        "tableName": "dictionary",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`word` TEXT NOT NULL, `mean` TEXT NOT NULL, `ara` TEXT NOT NULL, `fav` INTEGER NOT NULL, `id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL)",
         "fields": [
           {
-            "fieldPath": "id",
-            "columnName": "id",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "onvan",
-            "columnName": "onvan",
+            "fieldPath": "word",
+            "columnName": "word",
             "affinity": "TEXT",
             "notNull": true
           },
           {
-            "fieldPath": "matn",
-            "columnName": "matn",
+            "fieldPath": "mean",
+            "columnName": "mean",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ara",
+            "columnName": "ara",
             "affinity": "TEXT",
             "notNull": true
           },
           {
             "fieldPath": "fav",
             "columnName": "fav",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id",
+            "columnName": "id",
             "affinity": "INTEGER",
             "notNull": true
           }
@@ -46,7 +52,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '7729e0543818270b0c4ec0d57721cd73')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'd60c4d5ea11be6c1309e1301163b45f3')"
     ]
   }
 }
