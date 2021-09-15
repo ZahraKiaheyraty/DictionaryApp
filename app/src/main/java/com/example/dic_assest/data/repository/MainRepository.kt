@@ -1,12 +1,12 @@
 package com.example.dic_assest.data.repository
 
 import com.example.dic_assest.data.db.WordDao
-import com.example.dic_assest.data.db.entity.Word
+import com.example.dic_assest.data.db.entity.Fa2ar
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 class MainRepository @Inject constructor(var db:WordDao) {
-    fun getAllDetails(): Flow<List<Word>> {
+    fun getAllDetails(): Flow<List<Fa2ar>> {
         return db.getDefaultWord()
     }
 }

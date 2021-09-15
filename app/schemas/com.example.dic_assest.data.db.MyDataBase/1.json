@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "5b3834e4fe3e767ddefc6d67605c7649",
+    "identityHash": "7729e0543818270b0c4ec0d57721cd73",
     "entities": [
       {
-        "tableName": "word_tb",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `persian_word` TEXT NOT NULL, `english_word` TEXT NOT NULL, `italian_word` TEXT NOT NULL, `favorite` INTEGER NOT NULL, `view_count` INTEGER NOT NULL, `fav_date` INTEGER)",
+        "tableName": "fa2ar",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `onvan` TEXT NOT NULL, `matn` TEXT NOT NULL, `fav` INTEGER NOT NULL)",
         "fields": [
           {
             "fieldPath": "id",
@@ -15,40 +15,22 @@
             "notNull": true
           },
           {
-            "fieldPath": "persianWord",
-            "columnName": "persian_word",
+            "fieldPath": "onvan",
+            "columnName": "onvan",
             "affinity": "TEXT",
             "notNull": true
           },
           {
-            "fieldPath": "englishWord",
-            "columnName": "english_word",
+            "fieldPath": "matn",
+            "columnName": "matn",
             "affinity": "TEXT",
             "notNull": true
           },
           {
-            "fieldPath": "italianWord",
-            "columnName": "italian_word",
-            "affinity": "TEXT",
-            "notNull": true
-          },
-          {
-            "fieldPath": "favorite",
-            "columnName": "favorite",
+            "fieldPath": "fav",
+            "columnName": "fav",
             "affinity": "INTEGER",
             "notNull": true
-          },
-          {
-            "fieldPath": "viewCount",
-            "columnName": "view_count",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "date",
-            "columnName": "fav_date",
-            "affinity": "INTEGER",
-            "notNull": false
           }
         ],
         "primaryKey": {
@@ -64,7 +46,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '5b3834e4fe3e767ddefc6d67605c7649')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '7729e0543818270b0c4ec0d57721cd73')"
     ]
   }
 }

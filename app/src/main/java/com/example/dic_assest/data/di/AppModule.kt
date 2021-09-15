@@ -25,10 +25,10 @@ object AppModule {
             .databaseBuilder(
                 context,
                 MyDataBase::class.java,
-                "my_database"
+                "dic"
             )
             .fallbackToDestructiveMigration()
-            .createFromAsset("my_database")
+            .createFromAsset("dic")
             .build()
     }
 

@@ -2,7 +2,7 @@ package com.example.dic_assest.presentation.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.dic_assest.data.db.entity.Word
+import com.example.dic_assest.data.db.entity.Fa2ar
 import com.example.dic_assest.data.repository.MainRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -14,7 +14,7 @@ import javax.inject.Inject
 @HiltViewModel
 class MainViewModel @Inject constructor(var repository:MainRepository) :ViewModel(){
 
-    var state= MutableStateFlow<List<Word>>(emptyList())
+    var state= MutableStateFlow<List<Fa2ar>>(emptyList())
     var _state= state.asStateFlow()
 
 
